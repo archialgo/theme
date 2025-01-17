@@ -51,13 +51,13 @@ function setTheme(value) {
   if( value === themes.LIGHT) {
     if (document.getElementById("seu-logo") !== null) {
       document.getElementById("seu-logo").src = "https://archialgo-com-sources.oss-cn-hangzhou.aliyuncs.com/images/seu-arch-black.jpg";
-      document.getElementById("aaa-logo").src = "https://archialgo-com-sources.oss-cn-hangzhou.aliyuncs.com/images/aaa-long-black.jpg";
+      document.getElementById("aaa-logo").src = "https://archialgo-com-sources.oss-cn-hangzhou.aliyuncs.com/images/aaa-long-black.png";
     }
   }
   else {
     if (document.getElementById("seu-logo") !== null) {
       document.getElementById("seu-logo").src = "https://archialgo-com-sources.oss-cn-hangzhou.aliyuncs.com/images/seu-arch-white.jpg";
-      document.getElementById("aaa-logo").src = "https://archialgo-com-sources.oss-cn-hangzhou.aliyuncs.com/images/aaa-long-white.jpg";
+      document.getElementById("aaa-logo").src = "https://archialgo-com-sources.oss-cn-hangzhou.aliyuncs.com/images/aaa-long-white.png";
     }
   }
 }
