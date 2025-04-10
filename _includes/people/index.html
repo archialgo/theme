@@ -1,10 +1,9 @@
 {% for pos in site.data.people-category.position %}
   {% assign peoples = site.people | where:"position", pos %}
 
-  {% if peoples != empty %}
-  <h2 class="pt-3 text-center mt-5 mb-3">{{pos}}</h2>
-
   {% if pos == 'Alumni' %}
+    {% if peoples != empty %}
+    <h2 class="pt-3 text-center mt-5 mb-3">{{pos}}</h2>
     <div class="row px-3">
       {% for people in peoples %}
       {% if people.navs contains "template" %}
@@ -21,6 +20,8 @@
     </div>
     {% endif %}
   {% else %}
+    {% if peoples != empty %}
+    <h2 class="pt-3 text-center mt-5 mb-3">{{pos}}</h2>
     <div class="row px-3">
       {% for people in peoples %}
       {% if people.navs contains "template" %}
