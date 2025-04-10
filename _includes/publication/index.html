@@ -8,9 +8,6 @@
     {% if publication.navs contains "template" %}
     {% else %}
         {% include publication/publication-card.html %}
-        {% else %}
-        {% break %}
-        {% endif %}
     {% endif %}
 
 {% endfor %}
