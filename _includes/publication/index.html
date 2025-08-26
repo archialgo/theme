@@ -4,7 +4,7 @@
 
 <h2 class="pt-3 text-center mt-5 mb-3">Latest Publications</h2>
 
-{% for publication in site.publications reversed | limit : 12 %}
+{% for publication in site.publications reversed %}
     {% if publication.navs contains "template" %}
     {% else %}
         {% include publication/publication-card.html %}
