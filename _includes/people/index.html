@@ -1,11 +1,11 @@
 {% for pos in site.data.people-category.position %}
-  {% assign peoples = site.people | where:"position", pos %}
-
+  {% assign peoples = site.people | where:"position", pos  %}
+  {% assign peoples = peoples | sort: "year" %}
   {% if pos == 'Alumni' %}
     {% if peoples != empty %}
     <h2 class="pt-3 text-center mt-5 mb-3">{{pos}}</h2>
     <div class="row px-3">
-      {% for people in peoples | sort: "year" %}
+      {% for people in peoples %}
       {% if people.navs contains "template" %}
       {% else %}
       {%- assign people_id    = people.name | slugify -%}
@@ -23,7 +23,7 @@
     {% if peoples != empty %}
     <h2 class="pt-3 text-center mt-5 mb-3">{{pos}}</h2>
     <div class="row px-3">
-      {% for people in peoples | sort: "year" %}
+      {% for people in peoples %}
       {% if people.navs contains "template" %}
       {% else %}
       {%- assign people_id    = people.name | slugify -%}
